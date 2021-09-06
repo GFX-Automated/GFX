@@ -1,0 +1,56 @@
+.contact {
+
+  .address {
+    display: inline-block;
+    width: 35%;
+    margin-right: 5%;
+  }
+
+  .map {
+    margin-top: 1em;
+    width: 55%;
+    height: 250px;
+    float: right;
+  }
+}
+
+
+img {
+  border-radius: 75%;
+  max-width: 55px;
+  max-height: 60px;
+  align-content: flex-end;
+}
+
+.social {
+
+  .timeline {
+
+    width: 20%;
+    margin-right: 6%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .bubble {
+      background-size: 383px;
+    }
+  }
+
+  .twitter {
+    background-image: url("/twitter.png");
+    background-position: -51px -54px;
+  }
+
+  .linkedin {
+    background-image: url("/linkedin.png");
+    background-position: -175px -54px;
+  }
+
+  .github {
+    background-image: url("/github.png");
+    background-position: -259px -54px;
+  }
+
+}
