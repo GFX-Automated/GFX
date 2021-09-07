@@ -157,8 +157,18 @@ navigator.clipboard.writeText(document.getElementById("lblColor").innerText);
 document.getElementById("btnCopy").value = "Copied!";
 }
     </script>
+     
       
-         <p><b>Fruit and Colors</b></p>
+      <!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Load d3-cloud -->
+<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+   <p><b>Fruit and Colors</b></p>
     <script>
 
     // List of words II
