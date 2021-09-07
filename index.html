@@ -82,6 +82,83 @@
       <h3> Word Art Wall (Generator)</h3>
       <p>Essentially, this project allows for us to generate words randomly upon page refresh. </br><b>Press F5 on your Keyboard</b> or 
         <b><a href = "index.html">Browser Refresh</a><br><br></p> <br>
+  
+      
+            <p><b>Greetings</b></p>
+      
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Load d3-cloud -->
+<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<script>
+
+    // List of words
+    var myWords = ["Hello", "Hi", "Hey", "How Are You", "Hola", "¿Qué tal?", "Ni Hao", "Goede dag", "Hallo", "Salut", "Bonjour", "Guten tag", "Shalom", "Shalom aleichem", "Ciao", "Salve", "Konnichiwa", "Anyoung haseyo", "Anyoung", "Privet", "Zdravstvuyte", "Hej", "God dag"]
+   
+    // set the dimensions and margins of the graph
+    var margin = {top: 10, right: 10, bottom: 10, left: 10},
+        width = 450 - margin.left - margin.right,
+        height = 450 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#my_dataviz").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+    
+    // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
+    var layout = d3.layout.cloud()
+      .size([width, height])
+      .words(myWords.map(function(d) { return {text: d}; }))
+      .padding(5)
+      .fontSize(45)
+      .on("end", draw);
+    layout.start();
+    
+    // This function takes the output of 'layout' above and draw the words
+    // Better not to touch it. To change parameters, play with the 'layout' variable above
+    function draw(words) {
+      svg
+        .append("g")
+          .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+          .selectAll("text")
+            .data(words)
+          .enter().append("text")
+            .style("font-size", function(d) { return d.size + "px"; })
+            .attr("text-anchor", "middle")
+            .attr("transform", function(d) {
+              return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+            })
+            .text(function(d) { return d.text; });
+    }
+
+    //change color randomly
+
+    function changeColor() {
+var result = '#';
+var characters = 'abcdef123456789';
+for (var i = 0; i < 6; i++) {
+result += characters.charAt(Math.floor(Math.random() * characters.length));
+}
+document.getElementById("randomColor").style.backgroundColor = result;
+document.getElementById("lblHeader").style.color = result;
+document.getElementById("lblColor").innerText = result;
+document.getElementById("btnCopy").value = "Copy";
+}
+
+function copyColor() {
+navigator.clipboard.writeText(document.getElementById("lblColor").innerText);
+document.getElementById("btnCopy").value = "Copied!";
+}
+    </script>
+     
       
       <p><b>Greetings</b></p>
       
@@ -159,79 +236,14 @@ document.getElementById("btnCopy").value = "Copied!";
     </script>
      
       
-      <!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
 
-<!-- Load d3-cloud -->
-<script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
-
-<!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
-
-   <p><b>Fruit and Colors</b></p>
-    <script>
-
-    // List of words II
-    var myWords2 = ["red", "blue", "yellow", "green", "orange", "indigo", "violet", "purple", "pink", "magenta", "turquoise", "lilac", "black", "white", "gray", "grey", "off-white", "cream", "dogs", "dog", "cats", "cat", "canine", "feline", "giraffes", "giraffe", "penguins", "penguin", "armadillo", "panda", "axolotl", "lizard", "hamster", "gorilla", monkey", "iguana", "fish"]
-   
-    // set the dimensions and margins of the graph
-    var margin = {top: 10, right: 10, bottom: 10, left: 10},
-        width = 450 - margin.left - margin.right,
-        height = 450 - margin.top - margin.bottom;
-    
-    // append the svg object to the body of the page
-    var svg = d3.select("#my_dataviz").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-        .attr("transform",
-              "translate(" + margin.left + "," + margin.top + ")");
-    
-    // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
-    var layout = d3.layout.cloud()
-      .size([width, height])
-      .words(myWords.map(function(d) { return {text: d}; }))
-      .padding(5)
-      .fontSize(45)
-      .on("end", draw);
-    layout.start();
-    
-    // This function takes the output of 'layout' above and draw the words
-    // Better not to touch it. To change parameters, play with the 'layout' variable above
-    function draw(words) {
-      svg
-        .append("g")
-          .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
-          .selectAll("text")
-            .data(words)
-          .enter().append("text")
-            .style("font-size", function(d) { return d.size + "px"; })
-            .attr("text-anchor", "middle")
-            .attr("transform", function(d) {
-              return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-            })
-            .text(function(d) { return d.text; });
-    }
-    </script>
-<p>After you decide which wordcloud you like, screencap it with a tool such as Puu.sh, Lightshot, Snip Tool, or whatever tool you like best.</p>
-
-     <h3>Gradient Generator</h3>
-     <p>This allows the user to customize and also click on preset gradients.</p>
 <div>
-
-
   <div class="css-gradient-editor-container layout-init clearfix">
 
     <div class="row toolbar">
-
-
-
     </div>
-
     <div class="row">
-
         <div class="col-md-6">
-
             <div class="panel css-gradient-editor-swatches-wrapper">
                 <div class="panel-heading"><h2 class="panel-title pull-left">Presets</h2>
                     <div class="clearfix">
