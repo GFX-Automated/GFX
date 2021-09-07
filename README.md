@@ -13,7 +13,7 @@ Creative Commons License
 **WORDWALL**
 
 
- - **BACK END**: Python and NodeJS
+ - **BACK END**: Python, d3.JS and NodeJS
  
  -  **FRONT END AND SCRIPTS**: CSS, ReactJS, Javascript for everything else (*Art-Server* and *Art-Generator* Folders, *DB/Database* files) **WILL FIX ART-SERVER**
 
