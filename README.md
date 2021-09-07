@@ -1,6 +1,8 @@
 # GFX
+**PURPOSE**: To provide a space where artists and similar can be inspired, grab resources, and have gradients.
 
-Project link: https://gfx-automated.github.io/GFX/
+
+**Project link**: https://gfx-automated.github.io/GFX/
 
 Credits are given in-code where appropriate
 
