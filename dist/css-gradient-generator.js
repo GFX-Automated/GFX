@@ -1,18 +1,7 @@
 /*
  *  CSS Gradient Generator
  *  v2.1.0
- *  CSS gradient generator with the best browser support. Three different layouts to meet Your requirement (from simple linear to complex radial gradients).
- *  http://www.virtuosoft.eu/tools/css-gradient-generator/
- *
- *  Made by Virtuosoft:
- *      István Ujj-Mészáros - https://github.com/istvan-ujjmeszaros
- *      Ferenc Fapál - http://twitter.com/fwoodpaul
- *
- *  Thanks for the following persons:
- *      Tibor Szász - https://github.com/kowdermeister
- *      László Sotus - https://github.com/Lacisan
- *
- *  Licensed under the Apache License, Version 2.0
+ *  CSS gradient generator with the best browser support. Three different layouts to meet Your requirement (from simple linear to complex radial gradients). Licensed under the Apache License, Version 2.0
  */
 
 var CSSGradientEditor = function(container, options) {
@@ -4082,30 +4071,6 @@ var CSSGradientEditor = function(container, options) {
     return true;
   }
 
-  function initQR() {
-    qrcode = new QRCode('permalinkqr', {
-      text: 'http://www.virtuosoft.eu/css-gradient-generator/',
-      width: 280,
-      height: 280,
-      colorDark: '#000000',
-      colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.H
-    });
-  }
-
-  function updateQR() {
-    clearTimeout(qrupdatetimeout);
-
-    qrupdatetimeout = setTimeout(function() {
-      var url = 'http://www.virtuosoft.eu/tools/css-gradient-generator/?' + elements.permalink.data('querystring');
-
-      try {
-        qrcode.makeCode(url);
-      }
-      catch (e) {
-      }
-    }, 500);
-  }
 
   function detectCompatibilityLevel(dataset) {
     var needs = {
