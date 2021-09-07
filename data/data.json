@@ -1,24 +1,24 @@
 {
   "metadata": {
     "/": {
-      "title": "Steffen Kühne – Journalismus, Code & Design",
-      "description": "Konzeption, Beratung und Umsetzung von Projekten im Bereich Datenjournalismus, Visualisierung, interaktive Grafik und Webentwicklung in München.",
-      "keywords": "Datenjournalismus, Datenvisualisierung, interaktive Grafik, Storytelling, Innovation, Online-Journalismus, Webentwicklung, Datenkritik, Steffen Kühne, München",
-      "image": "https://stekhn.de/img/preview.jpg"
+      "title": "Catherine De Mesa's Art Generator Site",
+      "description": "GFX Art Website for all your Art Needs",
+      "keywords": "Art, Graphic, Design, Digital",
+      "image": "###"
     },
 
     },
     "/contact": {
-      "title": "Steffen Kühne – Kontakt",
-      "description": "Ich bin immer auf der Suche nach spannenden Projekten im Bereich interaktive Grafik, Datenjournalismus und Anwendungsentwicklung. Wenn Sie Interesse haben mit mir zusammenzuarbeiten, würde ich mich über eine kurze Nachricht freuen.",
-      "keyword": "Interaktive Grafik, Datenjournalismus, Anwendungsentwicklung, Steffen Kühne, München, Skype, Twitter, Github, Facebook, Linkedin, Xing",
-      "image": "https://stekhn.de/img/preview.jpg"
+      "title": "Catherine De Mesa - Contact",
+      "description": "Here are various methods where you can contact me!",
+      "keyword": "Art, Graphic, Design, Digital",
+      "image": "###"
     },
 
     "/about": {
-      "title": "Steffen Kühne – Kontakt",
-      "description": "Ich bin immer auf der Suche nach spannenden Projekten im Bereich interaktive Grafik, Datenjournalismus und Anwendungsentwicklung. Wenn Sie Interesse haben mit mir zusammenzuarbeiten, würde ich mich über eine kurze Nachricht freuen.",
-      "keyword": "Interaktive Grafik, Datenjournalismus, Anwendungsentwicklung, Steffen Kühne, München, Skype, Twitter, Github, Facebook, Linkedin, Xing",
-      "image": "https://stekhn.de/img/preview.jpg"
+      "title": "Catherine De Mesa - About Website",
+      "description": "Here is more about myself and my art website!",
+      "keyword": "###",
+      "image": "###"
     },
 }
