@@ -13,8 +13,10 @@ Creative Commons License
 
  - **BACK END**: Python and NodeJS
  
- -  **FRONT END AND SCRIPTS**: Javascript for everything else (*Art-Server* and *Art-Generator* Folders, *DB/Database* files) **WILL FIX ART-SERVER**
- **GRADIENT GENERATOR**
+ -  **FRONT END AND SCRIPTS**: CSS, ReactJS, Javascript for everything else (*Art-Server* and *Art-Generator* Folders, *DB/Database* files) **WILL FIX ART-SERVER**
+
+
+**GRADIENT GENERATOR**
 
 -**FRONT END AND UI**: Javascript, CSS, Bootstrap, PHP
 
