@@ -1,4 +1,4 @@
-# GFX
+# Multipurpose GFX Apps
 **PURPOSE**: To provide a space where artists and similar can be inspired, grab resources, and have gradients.
 
 
